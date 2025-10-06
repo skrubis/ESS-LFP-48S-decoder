@@ -1,0 +1,226 @@
+VERSION ""
+
+NS_ :
+   NS_DESC_
+   CM_
+   BA_DEF_
+   BA_
+   VAL_
+   CAT_DEF_
+   CAT_
+   FILTER
+   BA_DEF_DEF_
+   EV_DATA_
+   ENVVAR_DATA_
+   SGTYPE_
+   SGTYPE_VAL_
+   BA_DEF_SGTYPE_
+   BA_SGTYPE_
+   SIG_TYPE_REF_
+   VAL_TABLE_
+   SIG_GROUP_
+   SIG_VALTYPE_
+   SIGTYPE_VALTYPE_
+   BO_TX_BU_
+   BA_DEF_REL_
+   BA_REL_
+   BA_DEF_DEF_REL_
+   BU_SG_REL_
+   BU_EV_REL_
+   BU_BO_REL_
+   SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS_81 MASTER_01 HOST_F4
+
+BA_DEF_  "VFrameFormat" BO_  ENUM  "Standard","Extended","Mixed";
+BA_DEF_  BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_  "BusSpeed" BU_  INT  1 10000000;
+BA_ "BusSpeed" BMS_81 250000;
+BA_ "BusSpeed" MASTER_01 250000;
+BA_ "BusSpeed" HOST_F4 250000;
+
+BO_ 403767681 BMS81_CellVoltages_01: 8 BMS_81
+ SG_ CellV_01_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_02_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_03_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_04_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403767681 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403767681 500;
+
+BO_ 403767937 BMS81_CellVoltages_02: 8 BMS_81
+ SG_ CellV_05_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_06_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_07_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_08_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403767937 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403767937 500;
+
+BO_ 403768193 BMS81_CellVoltages_03: 8 BMS_81
+ SG_ CellV_09_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_10_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_11_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_12_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403768193 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403768193 500;
+
+BO_ 403768449 BMS81_CellVoltages_04: 8 BMS_81
+ SG_ CellV_13_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_14_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_15_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_16_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403768449 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403768449 500;
+
+BO_ 403768705 BMS81_CellVoltages_05: 8 BMS_81
+ SG_ CellV_17_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_18_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_19_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_20_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403768705 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403768705 500;
+
+BO_ 403768961 BMS81_CellVoltages_06: 8 BMS_81
+ SG_ CellV_21_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_22_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_23_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_24_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403768961 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403768961 500;
+
+BO_ 403769217 BMS81_CellVoltages_07: 8 BMS_81
+ SG_ CellV_25_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_26_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_27_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_28_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403769217 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403769217 500;
+
+BO_ 403769473 BMS81_CellVoltages_08: 8 BMS_81
+ SG_ CellV_29_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_30_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_31_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_32_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403769473 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403769473 500;
+
+BO_ 403769729 BMS81_CellVoltages_09: 8 BMS_81
+ SG_ CellV_33_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_34_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_35_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_36_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403769729 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403769729 500;
+
+BO_ 403769985 BMS81_CellVoltages_10: 8 BMS_81
+ SG_ CellV_37_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_38_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_39_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_40_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403769985 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403769985 500;
+
+BO_ 403770241 BMS81_CellVoltages_11: 8 BMS_81
+ SG_ CellV_41_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_42_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_43_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_44_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403770241 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403770241 500;
+
+BO_ 403770497 BMS81_CellVoltages_12: 8 BMS_81
+ SG_ CellV_45_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_46_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_47_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CellV_48_V : 55|16@0+ (0.001,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403770497 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403770497 500;
+
+BO_ 403833217 BMS81_Temps_01: 8 BMS_81
+ SG_ Temp_01_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_02_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_03_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_04_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403833217 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403833217 800;
+
+BO_ 403833473 BMS81_Temps_02: 8 BMS_81
+ SG_ Temp_05_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_06_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_07_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_08_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403833473 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403833473 800;
+
+BO_ 403833729 BMS81_Temps_03: 8 BMS_81
+ SG_ Temp_09_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_10_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_11_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_12_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403833729 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403833729 800;
+
+BO_ 403833985 BMS81_Temps_04: 8 BMS_81
+ SG_ Temp_13_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_14_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_15_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_16_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403833985 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403833985 800;
+
+BO_ 403834241 BMS81_Temps_05: 8 BMS_81
+ SG_ Temp_17_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_18_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_19_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_20_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403834241 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403834241 800;
+
+BO_ 403834497 BMS81_Temps_06: 8 BMS_81
+ SG_ Temp_21_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_22_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_23_C : 39|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ Temp_24_C : 55|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+BA_ "VFrameFormat" BO_ 403834497 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403834497 800;
+
+BO_ 403898753 BMS81_PackSummary: 8 BMS_81
+ SG_ MaxCell_V : 7|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ MinCell_V : 23|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ CapacityChar1_ASCII : 32|8@1+ (1,0) [0|0] "char" MASTER_01
+ SG_ CapacityChar2_ASCII : 40|8@1+ (1,0) [0|0] "char" MASTER_01
+ SG_ PackVoltage_V : 55|16@0+ (0.1,0) [0|0] "V" MASTER_01
+BA_ "VFrameFormat" BO_ 403898753 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403898753 100;
+
+BO_ 403899009 BMS81_CountsMeta: 6 BMS_81
+ SG_ CellCount : 0|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ TempCount : 8|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ MinCell_Index : 16|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ MaxCell_Index : 24|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ SubmoduleCount : 32|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ ModuleIndex : 40|8@1+ (1,0) [0|0] "" MASTER_01
+BA_ "VFrameFormat" BO_ 403899009 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403899009 100;
+
+BO_ 403899265 BMS81_TempDeltaSummary: 8 BMS_81
+ SG_ AvgTemp_C : 7|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ MinTemp_C : 23|16@0+ (0.01,0) [0|0] "degC" MASTER_01
+ SG_ CellDelta_V : 39|16@0+ (0.001,0) [0|0] "V" MASTER_01
+ SG_ Field_Unknown : 55|16@0+ (1,0) [0|0] "" MASTER_01
+BA_ "VFrameFormat" BO_ 403899265 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403899265 100;
+
+BO_ 403899521 BMS81_Reserved: 8 BMS_81
+ SG_ Reserved_0 : 0|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_1 : 8|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_2 : 16|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_3 : 24|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_4 : 32|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_5 : 40|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_6 : 48|8@1+ (1,0) [0|0] "" MASTER_01
+ SG_ Reserved_7 : 56|8@1+ (1,0) [0|0] "" MASTER_01
+BA_ "VFrameFormat" BO_ 403899521 "Extended";
+BA_ "GenMsgCycleTime" BO_ 403899521 500;
+
