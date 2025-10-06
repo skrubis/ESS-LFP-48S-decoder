@@ -29,8 +29,10 @@ public:
   inline uint8_t submoduleCount() const { return _submoduleCount; }
   inline uint8_t moduleIndex() const { return _moduleIndex; }
 
-  // Two ASCII chars that likely encode capacity like "43".
+  // Two ASCII-tag bytes observed as "43" in logs; may vary per device/variant.
   String capacityString() const;
+  inline uint8_t capacityB1() const { return _capacityChar1; }
+  inline uint8_t capacityB2() const { return _capacityChar2; }
 
   // Render a compact JSON snapshot into out.
   void toJson(String &out) const;

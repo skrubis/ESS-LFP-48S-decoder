@@ -260,11 +260,15 @@ class BMSApp(tk.Tk):
                 return f"{v:.{digits}f}"
             except Exception:
                 return "--"
+        cap_ascii = s.get('capacityAscii') or s.get('capacity') or ''
+        cap_hex = s.get('capacityBytesHex') or ''
+        socStr = f" | SoC {cap_ascii}%" if isinstance(cap_ascii, str) and cap_ascii.isdigit() and len(cap_ascii) == 2 else ""
         text = (
             f"Pack {fmt(s.get('packVoltage'),1)} V | Δ {fmt(s.get('cellDeltaV'),3)} V | "
             f"Max {fmt(s.get('maxCellV'),3)} | Min {fmt(s.get('minCellV'),3)} | "
             f"AvgT {fmt(s.get('avgTempC'),2)} °C | MinT {fmt(s.get('minTempC'),2)} °C | "
-            f"Cells {s.get('cellCount')} | Temps {s.get('tempCount')} | Module {s.get('moduleIndex')} | Cap {s.get('capacity')}"
+            f"Cells {s.get('cellCount')} | Temps {s.get('tempCount')} | Module {s.get('moduleIndex')} | "
+            f"Variant {cap_ascii} ({cap_hex}){socStr}"
         )
         self.summary.configure(text=text)
 

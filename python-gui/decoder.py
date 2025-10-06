@@ -28,6 +28,8 @@ class ESSLFP48SDecoder:
     module_index: int = 0
 
     capacity: str = ""
+    capacity_b1: int = 0
+    capacity_b2: int = 0
 
     def reset(self) -> None:
         self.cell_v = [float('nan')] * 48
@@ -37,6 +39,8 @@ class ESSLFP48SDecoder:
         self.cell_count = self.temp_count = self.min_cell_index = self.max_cell_index = 0
         self.submodule_count = self.module_index = 0
         self.capacity = ""
+        self.capacity_b1 = 0
+        self.capacity_b2 = 0
 
     @staticmethod
     def _in_range(x: int, lo: int, hi: int) -> bool:
@@ -68,6 +72,8 @@ class ESSLFP48SDecoder:
         if can_id == 0x18130181 and dlc >= 8:
             self.max_cell_v = u16be(data, 0) * 0.001
             self.min_cell_v = u16be(data, 2) * 0.001
+            self.capacity_b1 = data[4]
+            self.capacity_b2 = data[5]
             self.capacity = bytes([data[4], data[5]]).decode('ascii', errors='ignore')
             self.pack_voltage_v = u16be(data, 6) * 0.1
             matched = True
@@ -110,6 +116,9 @@ class ESSLFP48SDecoder:
             'submoduleCount': self.submodule_count,
             'moduleIndex': self.module_index,
             'capacity': self.capacity,
+            'capacityAscii': self.capacity,
+            'capacityBytesHex': f"0x{self.capacity_b1:02X},0x{self.capacity_b2:02X}",
+            'capacityBytesDec': [self.capacity_b1, self.capacity_b2],
             'cells': self.cell_v[:],
             'temps': self.temps_c[:],
         }

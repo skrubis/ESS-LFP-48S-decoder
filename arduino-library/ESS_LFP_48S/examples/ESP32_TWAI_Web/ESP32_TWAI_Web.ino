@@ -74,7 +74,10 @@ async function fetchData(){
   if(!r.ok) return;
   const j = await r.json();
   const s = document.getElementById('summary');
-  s.innerHTML = `Pack ${j.packVoltage?.toFixed(1)} V | Δ ${j.cellDeltaV?.toFixed(3)} V | Max ${j.maxCellV?.toFixed(3)} V | Min ${j.minCellV?.toFixed(3)} V | AvgT ${j.avgTempC?.toFixed(2)} °C | MinT ${j.minTempC?.toFixed(2)} °C | Cells ${j.cellCount} | Temps ${j.tempCount} | Module ${j.moduleIndex} | Cap ${j.capacity}`;
+  const capAscii = j.capacityAscii || j.capacity || '';
+  const capHex = j.capacityBytesHex || '';
+  const socStr = (/^[0-9]{2}$/.test(capAscii)) ? ` | SoC ${capAscii}%` : '';
+  s.innerHTML = `Pack ${j.packVoltage?.toFixed(1)} V | Δ ${j.cellDeltaV?.toFixed(3)} V | Max ${j.maxCellV?.toFixed(3)} V | Min ${j.minCellV?.toFixed(3)} V | AvgT ${j.avgTempC?.toFixed(2)} °C | MinT ${j.minTempC?.toFixed(2)} °C | Cells ${j.cellCount} | Temps ${j.tempCount} | Module ${j.moduleIndex} | Variant ${capAscii} (${capHex})${socStr}`;
   const cells = document.getElementById('cells');
   cells.innerHTML = '';
   (j.cells||[]).forEach((v,i)=>{

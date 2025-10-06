@@ -99,6 +99,12 @@ void ESS_LFP_48S::toJson(String &out) const {
   out += "\"submoduleCount\":" + String(submoduleCount()) + ",";
   out += "\"moduleIndex\":" + String(moduleIndex()) + ",";
   out += "\"capacity\":\"" + capacityString() + "\",";
+  // Also expose raw capacity bytes for diagnostics
+  out += "\"capacityAscii\":\"" + capacityString() + "\",";
+  char hexbuf[16];
+  snprintf(hexbuf, sizeof(hexbuf), "0x%02X,0x%02X", _capacityChar1, _capacityChar2);
+  out += "\"capacityBytesHex\":\"" + String(hexbuf) + "\",";
+  out += "\"capacityBytesDec\":[" + String(_capacityChar1) + "," + String(_capacityChar2) + "],";
   out += "\"cells\":[";
   for (int i = 0; i < 48; ++i) {
     if (i) out += ",";
